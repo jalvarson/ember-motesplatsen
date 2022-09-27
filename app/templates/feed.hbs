@@ -1,0 +1,11 @@
+{{page-title 'Feed'}}
+
+<div class='feed-wrapper'>
+
+  {{#each @model.feedPosts as |item|}}
+    <Feedcard @profile={{item}}>
+      <p>{{item.feedType}}</p>
+    </Feedcard>
+  {{/each}}
+
+</div>

@@ -1,0 +1,109 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  height: 60px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  width: 100%;
+  box-shadow: 0px 1px 6px rgba(37, 49, 61, 0.06);
+}
+
+.nav-wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 1400px;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0px 20px;
+}
+
+.nav__menu-desktop {
+  width: 100%;
+  max-width: 580px;
+
+  @include breakpoint(tablet) {
+    display: none;
+  }
+}
+
+
+.nav-bottom-bar {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0px -1px 6px rgba(37, 49, 61, 0.06);
+
+  @include breakpoint(tablet) {
+    display: flex;
+  }
+}
+
+.nav__menu-mobile {
+  width: 100%;
+  max-width: 768px;
+}
+
+.nav__menu-list {
+  text-decoration: none;
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__menu-list svg {
+  width: 20px;
+  height: 20px;
+
+  @include breakpoint(tablet) {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+
+  &:hover {
+    background-color: $primary-50;
+    ;
+  }
+
+  a {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    color: #e1385c;
+    height: 60px;
+    text-decoration: none;
+    padding: 0 6px;
+  }
+
+  a.active {
+    background-color: $primary-50;
+  }
+
+  @include breakpoint(tablet) {
+    font-size: 12px;
+    gap: 6px;
+  }
+}

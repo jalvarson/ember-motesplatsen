@@ -1,0 +1,33 @@
+<div class='feed-card'>
+  <div class='feed-card__header'>
+    <Avatar
+      @imgURL={{@profile.avatarUrl}}
+      @username={{@profile.name}}
+      @size='54px'
+    />
+    <div class='card-info'>
+      <div class='card-info__name'>{{@profile.name}}</div>
+      {{#if @profile.isVip}} <VipStar @size='16px' /> {{/if}}
+      <div class='card-info__desc'>34 år, från Varberg, Hallands län</div>
+      <div class='card-info__type'>Uppdaterade sin {{@profile.feedType}}</div>
+    </div>
+  </div>
+
+  <div class='feed-card__content'>
+    {{yield}}
+  </div>
+
+  <div class='feed-card__footer'>
+    <div class='card-footer__timestamp'>För 14 minuter sen</div>
+    <div class='card-footer__react'>
+      <button class='btn-icon' type='button'><FaIcon
+          @icon='comment'
+          @prefix='far'
+        /></button>
+      <button class='btn-icon' type='button'><FaIcon
+          @icon='face-smile-wink'
+          @prefix='far'
+        /></button>
+    </div>
+  </div>
+</div>

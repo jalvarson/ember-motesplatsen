@@ -1,0 +1,78 @@
+.sidebar {
+  flex: 1;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  min-width: 334px;
+  max-width: 334px;
+  flex-shrink: 0;
+  @include breakpoint(desktop) {
+    display: none;
+  }
+}
+
+.sidebar-user {
+  flex: 1;
+  min-width: 280px;
+  max-width: 280px;
+  flex-shrink: 0;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+
+  @include breakpoint(tablet) {
+    display: none;
+  }
+}
+
+.sidebar-user__info {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.sidebar-user__name {
+  margin-top: 8px;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.sidebar-user__desc {
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+  color: $black-60;
+  text-align: center;
+}
+
+.sidebar-user__vipad {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 36px;
+  background-color: $warning-50;
+  border-radius: 12px;
+  gap: 8px;
+  text-align: center;
+  padding: 36px 20px 20px 20px;
+
+  img {
+    width: 44px;
+  }
+}
+
+.sidebar-user__vipad-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: $warning-500;
+  margin-top: 8px;
+}
+
+.sidebar-user__vipad-desc {
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+  margin-bottom: 16px;
+}

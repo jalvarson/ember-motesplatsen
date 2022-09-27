@@ -1,0 +1,59 @@
+{{page-title 'EmberMp'}}
+<Header />
+
+<div class='site-container'>
+  {{#if (eq this.router.currentRouteName 'feed')}}
+    <div class='sidebar-user'>
+      <Card>
+        <div class='sidebar-user__info'>
+          <Avatar
+            @imgURL='https://static.motesplatsen.se/userphotos/3625194/x196/f30a0c1f-45e6-4549-b5a9-42befa3c9425'
+            @username='Jonas'
+            @size='100px'
+          />
+          <div class='sidebar-user__name'>Jonas</div>
+          <div class='sidebar-user__desc'>
+            33 år, Varberg
+            <br />
+            Söker kvinna, 29-37 år
+          </div>
+        </div>
+
+        <div class='sidebar-user__vipad'>
+          <img
+            src='https://static.motesplatsen.se/userinformation/pictures/admin/pay/ic-vip.svg'
+          />
+          <div class='sidebar-user__vipad-title'>Öka din chanser med
+            VIP-medlemskap</div>
+          <div class='sidebar-user__vipad-desc'>Get more out of your time. Get a
+            VIP membership today</div>
+          <button class='btn vip' type='button'>Bli VIP-medlem</button>
+        </div>
+      </Card>
+    </div>
+  {{/if}}
+
+  <main>
+    {{outlet}}
+  </main>
+
+  {{#if (eq this.router.currentRouteName 'feed')}}
+    <aside class='sidebar'>
+      <Card />
+      <Card />
+    </aside>
+  {{/if}}
+
+  {{#if (eq this.router.currentRouteName 'explore')}}
+    <aside class='sidebar'>
+      <Card />
+      <Card />
+    </aside>
+  {{/if}}
+
+</div>
+<div class='nav-bottom-bar'>
+  <div class='nav__menu-mobile'>
+    <Nav />
+  </div>
+</div>

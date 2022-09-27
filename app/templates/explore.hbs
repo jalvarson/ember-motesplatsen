@@ -1,0 +1,18 @@
+{{page-title 'Explore'}}
+
+<div class='menu-explore'>
+  Menu here...
+</div>
+
+<div class='container-profiles'>
+  <div class='content__header'>
+    <h2 class='header-title'>Nya singlar</h2>
+    <span class='header-desc'>Kolla in nya singlar som befinner inom ditt
+      singelfilter.</span>
+  </div>
+  <div class='content-profiles'>
+    {{#each @model.userProfiles as |item|}}
+      <Profilecard @data={{item}} />
+    {{/each}}
+  </div>
+</div>
