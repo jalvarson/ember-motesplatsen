@@ -1,0 +1,31 @@
+<div class='content__header'>
+  <div class='content-title'>
+    <h2 class='header-title'>Nya singlar</h2>
+    <span class='header-desc'>New singles in your search criteria. Adjust your
+      single filter to change.</span>
+  </div>
+  <div class='content-filter'>
+    <div class='filter__button'>
+      <label for='filterWithPicture'>Profilfoto</label>
+      <Input
+        id='filterWithPicture'
+        @type='checkbox'
+        @checked={{this.havePicture}}
+        {{on 'input' this.toggleHasPicture}}
+      />
+    </div>
+  </div>
+
+</div>
+
+<div class='content-profiles'>
+  <Profiles::Filter
+    @profiles={{@profiles}}
+    @onlyWithPicture={{this.havePicture}}
+    as |results|
+  >
+    {{#each results as |profile|}}
+      <Profilecard @profile={{profile}} />
+    {{/each}}
+  </Profiles::Filter>
+</div>
