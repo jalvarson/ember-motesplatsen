@@ -1,10 +1,48 @@
-.menu-explore {
+.container-menu-explore {
   @include cardLayout();
+  padding: 6px;
 }
+
+.menu-explore {
+  display: flex;
+  justify-content: flex-start;
+  gap: 4px;
+}
+
+.menu-explore__item {
+
+  a {
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 1rem;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: $black;
+  }
+
+  a.active {
+    background-color: $primary-50;
+    color: $primary-600;
+  }
+
+  a:hover {
+    background-color: $primary-50;
+    color: $primary-600;
+  }
+
+  a:active {
+    background-color: $primary-100;
+    color: $primary-600;
+  }
+}
+
 
 .container-profiles {
   @include cardLayout();
   display: flex;
+  padding: 20px;
   flex-direction: column;
   margin-bottom: 70px;
   padding-top: 26px;
@@ -13,9 +51,24 @@
 
 .content__header {
   display: flex;
-  flex-direction: column;
-
+  flex-direction: row;
+  justify-content: space-between;
   margin-bottom: 8px;
+}
+
+.content-filter {
+  display: flex;
+  align-items: flex-end;
+}
+
+.filter__button {
+  display: flex;
+  align-items: center;
+
+  label {
+    padding-right: 6px;
+    font-size: 0.9rem;
+  }
 }
 
 .header-desc {

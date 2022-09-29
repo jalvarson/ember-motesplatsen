@@ -1,18 +1,17 @@
 {{page-title 'Explore'}}
 
-<div class='menu-explore'>
-  Menu here...
+<div class='container-menu-explore'>
+  <ul class='menu-explore'>
+    <li class='menu-explore__item'><LinkTo @route='explore.new-singles'>Singlar
+        online</LinkTo></li>
+    <li class='menu-explore__item'><LinkTo @route='feed'>Nya foton</LinkTo></li>
+    <li class='menu-explore__item'><LinkTo @route='feed'>Nya singlar</LinkTo></li>
+    <li class='menu-explore__item'><LinkTo @route='feed'>Bästa matcher</LinkTo></li>
+    <li class='menu-explore__item'><LinkTo @route='feed'>Nya matcher</LinkTo></li>
+    <li class='menu-explore__item'><LinkTo @route='feed'>Dejter</LinkTo></li>
+  </ul>
 </div>
 
 <div class='container-profiles'>
-  <div class='content__header'>
-    <h2 class='header-title'>Nya singlar</h2>
-    <span class='header-desc'>Kolla in nya singlar som befinner inom ditt
-      singelfilter.</span>
-  </div>
-  <div class='content-profiles'>
-    {{#each @model.userProfiles as |item|}}
-      <Profilecard @data={{item}} />
-    {{/each}}
-  </div>
+  <Profiles @profiles={{@model.profiles}} />
 </div>

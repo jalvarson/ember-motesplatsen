@@ -1,15 +1,15 @@
-import EmberRouter from '@ember/routing/router';
-import config from 'ember-mp/config/environment';
+import EmberRouter from '@ember/routing/router'
+import config from 'ember-mp/config/environment'
 
 export default class Router extends EmberRouter {
-  location = config.locationType;
-  rootURL = config.rootURL;
+  location = config.locationType
+  rootURL = config.rootURL
 }
 
 Router.map(function () {
-  this.route('feed', { path: '/' });
-  this.route('like');
-  this.route('explore');
-  this.route('notifications');
-  this.route('messages');
-});
+  this.route('feed', { path: '/' })
+  this.route('like')
+  this.route('explore', function () {})
+  this.route('notifications')
+  this.route('messages')
+})
