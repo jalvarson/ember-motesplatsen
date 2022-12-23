@@ -1,11 +1,11 @@
 import Route from '@ember/routing/route'
 
-export default class FeedRoute extends Route {
+export default class ExploreNewSinglesRoute extends Route {
   async model() {
     let response = await fetch('/api/profiles.json')
     let parsed = await response.json()
-    let feedPosts = parsed.profiles
+    let profiles = parsed.profiles
 
-    return { feedPosts }
+    return { profiles }
   }
 }

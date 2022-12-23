@@ -6,6 +6,9 @@
   min-width: 334px;
   max-width: 334px;
   flex-shrink: 0;
+  position: sticky;
+  top: 80px;
+
   @include breakpoint(desktop) {
     display: none;
   }
@@ -19,6 +22,8 @@
   display: flex;
   gap: 16px;
   flex-direction: column;
+  position: sticky;
+  top: 80px;
 
   @include breakpoint(tablet) {
     display: none;

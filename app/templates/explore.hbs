@@ -1,5 +1,4 @@
 {{page-title 'Explore'}}
-
 <div class='container-menu-explore'>
   <ul class='menu-explore'>
     <li class='menu-explore__item'><LinkTo @route='explore.new-singles'>Singlar
@@ -12,6 +11,4 @@
   </ul>
 </div>
 
-<div class='container-profiles'>
-  <Profiles @profiles={{@model.profiles}} />
-</div>
+{{outlet}}

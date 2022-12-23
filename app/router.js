@@ -9,7 +9,9 @@ export default class Router extends EmberRouter {
 Router.map(function () {
   this.route('feed', { path: '/' })
   this.route('like')
-  this.route('explore', function () {})
+  this.route('explore', function () {
+    this.route('new-singles')
+  })
   this.route('notifications')
   this.route('messages')
 })
